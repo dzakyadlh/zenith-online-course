@@ -43,7 +43,7 @@ Route::get('/home', function () {
 
 Route::get('/courses', [CourseController::class, 'index']);
 
-Route::get('/courses/{slug}', [CourseController::class, 'show']);
+Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
 Route::get('/about', function () {
     return view('about', [
