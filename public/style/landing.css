@@ -1,0 +1,135 @@
+.landing-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.landing-welcome {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.landing-welcome .btn {
+    width: 400px;
+    margin: 20px 0;
+}
+
+.landing-welcome-figure {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-welcome-figure img {
+    width: 500px;
+    height: auto;
+}
+
+.landing-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.landing-body section {
+    margin-bottom: 40px;
+}
+
+.landing-sponsors {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsors {
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sponsors img {
+    height: 150px;
+}
+
+.landing-benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.landing-benefits figure img {
+    width: 500px;
+    margin: 0 40px;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefits li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.benefits li .logo {
+    width: 40px;
+    margin-right: 20px;
+    color: red;
+}
+
+.landing-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-reviews .reviews {
+    display: flex;
+    margin-top: 20px;
+}
+
+.landing-reviews .review-card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px black;
+}
+
+.landing-reviews .card-title {
+    margin-bottom: 10px;
+}
+
+.landing-reviews .card-text {
+    font-size: 0.9rem;
+}
+
+.review-card-identity {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.review-card-identity img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.mini-profile-bio {
+    display: flex;
+    flex-direction: column;
+}

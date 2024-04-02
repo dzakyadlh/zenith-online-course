@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    color: black;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1.2rem;
+}

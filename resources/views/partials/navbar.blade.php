@@ -16,6 +16,14 @@
                 <a class="nav-link {{ ($title === 'About') ? 'active' : '' }}" href="/about">About</a>
             </li>
         </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link {{ ($title === 'Login') ? 'active' : '' }}" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ ($title === 'Signup') ? 'active' : '' }}" href="/signup">Signup</a>
+            </li>
+        </ul>
     </div>
     </div>
 </nav>
