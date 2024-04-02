@@ -8,71 +8,29 @@
     <body>
         @include('partials.navbar')
         <div class="main-container">
-            <header class="landing-header">
-                <div class="landing-welcome">
-                    <h1>Reach your peak potential with Zenith</h1>
-                    <p>
-                        An exceptional learning platform with world class
-                        mentors from around the world
-                    </p>
-                    <button type="button" class="btn btn-lg" href="/signup">
-                        Get Started
-                    </button>
+            <main class="login-container">
+                <h1>Login</h1>
+                <div class="form-floating mb-3">
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Email address</label>
                 </div>
-                <figure class="landing-welcome-figure">
-                    <img src="" alt="landing-welcome-figure" />
-                </figure>
-            </header>
-            <main class="landing-body">
-                <section class="landing-sponsors">
-                    <h6>Recommended and trusted by various institutions</h6>
-                    <div class="sponsors">
-                        <img src="" alt="sponsor-logo" />
-                        <img src="" alt="sponsor-logo" />
-                        <img src="" alt="sponsor-logo" />
-                        <img src="" alt="sponsor-logo" />
-                        <img src="" alt="sponsor-logo" />
-                    </div>
-                </section>
-                <section class="landing-benefits">
-                    <figure></figure>
-                    <div class="benefits">
-                        <h2>
-                            Our plan is to provide the best growth environment
-                            and learning experience for you
-                        </h2>
-                        <li>
-                            <img src="" alt="" />
-                            <p></p>
-                        </li>
-                    </div>
-                </section>
-                <section class="landing-reviews">
-                    <h2>What our alumnus said about us</h2>
-                    <p>
-                        Our alumnus are scattered around the world and succeeded
-                        in developing their career as professionals
-                    </p>
-                    <div class="card-group">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary"
-                                    >Last updated 3 mins ago</small
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <div class="form-floating">
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password"
+                    />
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <button class="btn btn-danger btn-lg" type="submit">
+                    Login
+                </button>
             </main>
         </div>
         @include('partials.footer')

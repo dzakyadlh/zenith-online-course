@@ -1,7 +1,8 @@
-.main-container {
+.forms-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 100vh;
     color: black;
@@ -9,15 +10,15 @@
 }
 
 h1 {
-    font-size: 5rem;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 2rem;
-    margin: 20px 0;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: red;
 }
 
 p {
     font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
 }
