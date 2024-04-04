@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CourseController;
+use App\Models\Category;
 use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 
@@ -46,6 +47,13 @@ Route::get('/home', function () {
 Route::get('/courses', [CourseController::class, 'index']);
 
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
+
+Route::get('/categories/{category:slug}', function (Category $category) {
+    return view('courses', [
+        'title' => "$category->name Courses",
+        'courses' => $category->courses
+    ]);
+});
 
 Route::get('/about', function () {
     return view('about', [
