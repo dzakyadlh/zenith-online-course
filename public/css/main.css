@@ -13,6 +13,7 @@
     min-height: 100vh;
     color: black;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 h1 {

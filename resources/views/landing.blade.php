@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('styles')
+    <link rel="stylesheet" href="./css/landing.css" type="text/css"/>
+@endsection
+
 @section('container')
     <header class="landing-header">
         <div class="landing-welcome">

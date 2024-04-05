@@ -1,5 +1,9 @@
 @extends('layouts.forms')
 
+@section('styles')
+    <link rel="stylesheet" href="./css/login.css" type="text/css"/>
+@endsection
+
 @section('container')
     <main class="login-container">
         <h1>Login</h1>
