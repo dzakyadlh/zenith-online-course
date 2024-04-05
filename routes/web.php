@@ -5,7 +5,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CourseController;
-
+use App\Http\Controllers\SignupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +26,9 @@ Route::get('/', function () {
 
 Route::get('/login', [LoginController::class, 'index']);
 
-Route::get('/signup', function () {
-    return view('signup', [
-        'title' => 'Sign Up',
-        'active' => 'signup',
-    ]);
-});
+Route::get('/signup', [SignupController::class, 'create']);
+
+Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/home', function () {
     return view('home', [
