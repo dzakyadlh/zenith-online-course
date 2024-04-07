@@ -24,18 +24,22 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'login']);
+
+Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/signup', [SignupController::class, 'create']);
 
 Route::post('/signup', [SignupController::class, 'store']);
 
-Route::get('/home', function () {
-    return view('home', [
-        'title' => 'Home',
-        'active' => 'home',
+Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
+Route::get('/dashboard', function () {
+    return view('dashboard', [
+        'title' => 'Dashboard',
+        'active' => 'dashboard',
     ]);
-});
+})->middleware('auth');
 
 Route::get('/courses', [CourseController::class, 'index']);
 

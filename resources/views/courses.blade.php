@@ -17,7 +17,7 @@
   </div>
   @if (count($courses))
   <p class="text-center fs-4">{{ $courses[0]->category->description }}</p>
-  <div class="row">
+  <div class="row row-cols-auto g-2 px-2 justify-content-center">
     @foreach ($courses as $course)
       <a href="/courses/{{ $course->slug }}" class="text-decoration-none col mb-3">
         <div class="card mx-1" style="width: 18rem;">
