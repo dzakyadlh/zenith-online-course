@@ -5,6 +5,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SignupController;
 
 /*
@@ -24,22 +25,17 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/login', [LoginController::class, 'login']);
+Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 
 Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::get('/signup', [SignupController::class, 'create']);
+Route::get('/signup', [SignupController::class, 'create'])->middleware('guest');
 
 Route::post('/signup', [SignupController::class, 'store']);
 
 Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard', [
-        'title' => 'Dashboard',
-        'active' => 'dashboard',
-    ]);
-})->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::get('/courses', [CourseController::class, 'index']);
 

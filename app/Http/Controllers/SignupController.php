@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class SignupController extends Controller
 {
     public function create()
     {
-        return view('signup', [
-            'title' => 'Sign Up',
-            'active' => 'signup',
-        ]);
+        if (Auth::check()) {
+            return redirect('dashboard');
+        } else {
+            return view('signup', [
+                'title' => 'Sign Up',
+                'active' => 'signup',
+            ]);
+        }
     }
 
     public function store(Request $request)

@@ -1,4 +1,4 @@
-@if (Auth::user())
+@auth
 <nav class="navbar navbar-expand-lg bg-body-tertiary z-3">
   <div class="container-fluid px-5">
     <a class="navbar-brand text-danger" href="/">Zenith</a>
@@ -25,11 +25,20 @@
         </li>
       </ul>
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link {{ ($title === 'Profile') ? 'active' : '' }}" href="/profile">Profile</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link {{ ($title === 'Logout') ? 'active' : '' }} text-danger" href="/logout">Logout</a>
+          <li class="nav-item dropdown d-flex align-items-center">
+            <img src="images/ppexample.jpg" alt="Profile Picture" width="40" height="40" class="rounded-circle mr-2">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ auth()->user()->name }}
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item {{ ($title === 'Profile') ? 'active' : '' }}" href="/profile">
+                  <i class="bi bi-person-fill mr-2"></i>Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item {{ ($title === 'Logout') ? 'active' : '' }} text-danger" href="/logout">
+                  <i class="bi bi-box-arrow-left mr-2"></i>Logout</a></li>
+            </ul>
           </li>
       </ul>
     </div>
@@ -69,4 +78,4 @@
     </div>
   </div>
 </nav>
-@endif
+@endauth
